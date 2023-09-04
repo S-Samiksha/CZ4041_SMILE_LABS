@@ -135,6 +135,7 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
+
 # mkdocs documentation
 /site
 
@@ -148,6 +149,17 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
+
+#Data
+*.csv
+*.20o
+*.21o
+*.22o
+*.nmea
+*.json
+*.o
+*.txt
+*.zip
 
 # Cython debug symbols
 cython_debug/
