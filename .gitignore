@@ -160,6 +160,7 @@ dmypy.json
 *.o
 *.txt
 *.zip
+*.jpg
 
 # Cython debug symbols
 cython_debug/
