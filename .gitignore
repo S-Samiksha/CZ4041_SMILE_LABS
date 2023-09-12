@@ -158,7 +158,6 @@ dmypy.json
 *.nmea
 *.json
 *.o
-*.txt
 *.zip
 *.jpg
 
