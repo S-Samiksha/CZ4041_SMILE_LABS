@@ -2,10 +2,10 @@
 ML project on Kaggle
 
 ## Documents, train, test, CSVs etc. 
-For training images: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test-public-faces.zip
-For training relationships CSV: test-public-relationships.csv (from github)
-For test images: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test.zip
-For test sample submission csv: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=sample_submission.csv
+For training images: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test-public-faces.zip <br>
+For training relationships CSV: test-public-relationships.csv (from github) <br>
+For test images: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test.zip <br>
+For test sample submission csv: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=sample_submission.csv <br>
 
 ## What has been done so far 
 
