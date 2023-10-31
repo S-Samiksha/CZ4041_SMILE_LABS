@@ -1,9 +1,24 @@
 # CE4041_Kaggle
 ML project on Kaggle
 
+## Documents, train, test, CSVs etc. 
+For training images: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test-public-faces.zip
+For training relationships CSV: test-public-relationships.csv (from github)
+For test images: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test.zip
+For test sample submission csv: https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=sample_submission.csv
 
 ## What has been done so far 
 
-1. Facenet Version 4 (0.807)
+1. Facenet Version 4 (0.807 @ 30 Epochs)
+   - Add a lot more data to become 59K
+   - The data added is more within the same family. Meaning, we are family but not kin (this data predominates the whole thing)
+   - The fully connected layers after the facenet convolutional layer has dropout at 0.7 to prevent overfitting and batchnorm as well
+   - Every other epoch, we are changing data augmentation to introduce more variation to prevent overfitting
+   - grayscale is important because some of the test data is greyscale. blur is important because some of the data is highly blurred. random horizontal flip to increase variation
+   - we can try randomcrop because some of the test data is cropped, color jitter as well
+   - some images in the test cases have two faces —> so i feel random crop might help. OR stacking (there is a pytorch function iirc)
+   - learning rate is set at 0.005 batch size is 64
 
-2. Facenet Version 5 (0.867)
+3. Facenet Version 5 (0.867 @ 30 Epochs)
+   - Updated version from version 4
+   - Randomized data set 
