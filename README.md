@@ -20,6 +20,13 @@ For monitoring all other submissions: https://docs.google.com/spreadsheets/u/0/d
    - some images in the test cases have two faces —> so i feel random crop might help. OR stacking (there is a pytorch function iirc)
    - learning rate is set at 0.005 batch size is 64
 
-3. Facenet Version 5 (0.867 @ 30 Epochs)
+2. Facenet Version 5 (0.867 @ 30 Epochs)
    - Updated version from version 4
    - Randomized data set 
+
+3. Facenet Version 6(0.907 @ 30 Epochs)
+   - https://colab.research.google.com/drive/1FM-ls2q-9VKl3Ny2cOQjxbP5MXSQN2Wk?usp=sharing
+   - Changing drop out from 0.7 to 0.55
+   - Adding data augmentation of cropping and color jittering
+   - Randomizing the non-relationship
+   - Using all relationships available but randomizing the pictures selected 
