@@ -17,7 +17,7 @@ Tabu <br>
 
 ## Proposed Solution and Explanation of code 
 
-*Fully Connected Layers** <br>
+*Fully Connected Layers* <br>
 Changing the fully connected layers allows us to have more flexibility and control over the model whilst still using a pre trained model. The fully connected layers that are important are the DropOut Layer and the BatchNormId. 
 <br>
 ```python
