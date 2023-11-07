@@ -1,5 +1,5 @@
 # CE4041_Kaggle
-ML project on Kaggle
+As part of NTU's CZ/CE4041 Machine Learning Module, the team was tasked to compete in a Kaggle Competition (closed). The team chose to do the [Northeastern SMILE Lab - Recognizing Faces in the Wild](https://www.kaggle.com/c/recognizing-faces-in-the-wild/). The aim of the competition is to determine the probability of kinship given two images. In summary, our group used the siamese network to help achieve a score of **0.907** on the Kaggle Public Leaderboard. 
 
 ## Members 
 Sankar Samiksha <br>
