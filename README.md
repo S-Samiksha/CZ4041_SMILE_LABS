@@ -30,4 +30,4 @@ For monitoring all other submissions: https://docs.google.com/spreadsheets/u/0/d
    - Adding data augmentation of cropping and color jittering
    - Randomizing the non-relationship
    - Using all relationships available but randomizing the pictures selected
-   - Submitted CSV: 
+   - Submitted CSV: test_Results_SAM_NO_MTCNN_30Epochs_BatchSize_64_new_csv_probability_new_data_new_data_augment_05Drouput.csv
