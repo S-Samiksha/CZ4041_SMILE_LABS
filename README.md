@@ -10,6 +10,58 @@ ML project on Kaggle
 
 ## Proposed Solution and Explanation of code 
 
+*Fully Connected Layers** <br>
+Changing the fully connected layers allows us to have more flexibility and control over the model whilst still using a pre trained model. The fully connected layers that are important are the DropOut Layer and the BatchNormId. 
+<br>
+```python
+model.classifier = nn.Sequential(
+            nn.Linear(3584,2048),
+            nn.ReLU(),
+            nn.Dropout(0.55),  # Add dropout for regularization
+            nn.Linear(2048, 512),
+            nn.ReLU(),
+            nn.Linear(512, 256),
+            nn.ReLU(),
+            nn.BatchNorm1d(256), # Apply batch normalization
+            nn.Linear(256, 2)
+        )
+```
+*Pre-trained Model, Learning Rate, Adam Optimizer and Loss Criterion* <br>
+A pre-trained model was used. [Facenet](https://github.com/timesler/facenet-pytorch/tree/master) has been trained on the vggface2 image dataset. 
+<br>
+```python
+
+# Create the Siamese network
+net = SiameseNetwork(InceptionResnetV1(pretrained='vggface2', classify=False)).cuda()
+# Define the contrastive loss
+criterion = nn.CrossEntropyLoss()
+
+# Define the optimizer (e.g., Adam)
+optimizer = optim.Adam(net.parameters(), lr=0.0005)
+
+```
+*Constantly changing data augmentation* <br>
+A constantly changing data augmentation was implemented by the team. It is `unique` and has not been used by those in the competition. 
+<br>
+```python
+    if epoch % 10 == 0 or epoch %10 == 1 or epoch %10 == 2 or epoch %10 == 3:
+      print("Data Augmentation: None")
+      trainloader = createTrain([transforms.Resize((IMG_SIZE,IMG_SIZE)),transforms.ToTensor()])
+    elif epoch %10 == 4 or epoch %10 == 5:
+       print("Data Augmentation: RandomGrayScale(0.5)")
+       trainloader = createTrain([transforms.Resize((IMG_SIZE,IMG_SIZE)),transforms.RandomGrayscale(p=0.5),transforms.ToTensor()])
+    elif epoch %10 == 6 or epoch %10 == 7:
+      print("Data Augmentation: RandomCrop((90,90)),RandomGrayScale(0.8), RandomHorizontalFlip, GaussianBlur(kernel_size = 5, sigma=(0.1, 3.0)")
+      trainloader = createTrain([transforms.RandomCrop((80,80)),transforms.Resize((IMG_SIZE,IMG_SIZE)),transforms.RandomGrayscale(p=0.8),transforms.RandomHorizontalFlip(),transforms.GaussianBlur(kernel_size = 5, sigma=(0.1, 3.0)),transforms.ToTensor()])
+    elif epoch %10 == 8 or epoch %10 == 9:
+      print("Data Augmentation: RandomGrayScale(0.8), RandomHorizontalFlip, ColorJitter(brightness=0.7, contrast=0.3),")
+      trainloader = createTrain([transforms.Resize((IMG_SIZE,IMG_SIZE)),transforms.RandomGrayscale(p=0.5),transforms.RandomHorizontalFlip(),transforms.ColorJitter(brightness=0.7, contrast=0.3),transforms.ToTensor()])
+    else:
+      print("Data Augmentation: None")
+      trainloader = createTrain([transforms.Resize((IMG_SIZE,IMG_SIZE)),transforms.ToTensor()])
+```
+
+
 ## Significant Milestones Achieved through Experiments 
 
 1. Facenet Version 4 (0.807 @ 30 Epochs)
