@@ -24,9 +24,10 @@ For monitoring all other submissions: https://docs.google.com/spreadsheets/u/0/d
    - Updated version from version 4
    - Randomized data set 
 
-3. Facenet Version 6(0.907 @ 30 Epochs)
+3. Facenet Version 7 (0.907 @ 30 Epochs)
    - https://colab.research.google.com/drive/1FM-ls2q-9VKl3Ny2cOQjxbP5MXSQN2Wk?usp=sharing
    - Changing drop out from 0.7 to 0.55
    - Adding data augmentation of cropping and color jittering
    - Randomizing the non-relationship
-   - Using all relationships available but randomizing the pictures selected 
+   - Using all relationships available but randomizing the pictures selected
+   - Submitted CSV: 
