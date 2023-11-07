@@ -1,6 +1,13 @@
 # CE4041_Kaggle
 ML project on Kaggle
 
+## Members 
+Sankar Samiksha <br>
+Jia Min <br>
+Xing Kun <br>
+Yu Pei <br>
+Tabu <br>
+
 ## Documents, train, test, CSVs etc. 
 [For training images](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test-public-faces.zip) <br><br>
 [For training relationships CSV:](https://github.com/S-Samiksha/CE4041_Kaggle/blob/main/test-public-relationships.csv) <br><br>
