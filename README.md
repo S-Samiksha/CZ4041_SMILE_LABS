@@ -3,10 +3,12 @@ ML project on Kaggle
 
 ## Documents, train, test, CSVs etc. 
 [For training images](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test-public-faces.zip) <br><br>
-For training relationships CSV: test-public-relationships.csv (from github) <br><br>
+[For training relationships CSV:](https://github.com/S-Samiksha/CE4041_Kaggle/blob/main/test-public-relationships.csv) <br><br>
 [For test images:](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test.zip) <br><br>
 [For test sample submission csv:](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=sample_submission.csv) <br><br>
 [For monitoring all other submissions:](https://docs.google.com/spreadsheets/u/0/d/1gLLzor08xsw7wZcxoJIVv4xDkaSnzP8LzTi0noMx8vA/edit?pli=1#gid=0) <br><br>
+
+## Proposed Solution and Explanation of code 
 
 ## Significant Milestones Achieved through Experiments 
 
@@ -28,5 +30,5 @@ For training relationships CSV: test-public-relationships.csv (from github) <br>
    - Adding data augmentation of cropping as there are images with two faces in them, some faces are obscured by sunglasses, or other accessories.
    - Adding data augmentation of color jittering as the images are of different brightness and contrast
    - Randomizing the non-relationship dataset
-   - All relationships in the [CSV](https://github.com/S-Samiksha/CE4041_Kaggle/main/test-public-relationships.csv) however the pictures selected was randomized
-   - Submitted CSV: test_Results_SAM_NO_MTCNN_30Epochs_BatchSize_64_new_csv_probability_new_data_new_data_augment_05Drouput.csv
+   - All relationships in the [CSV](https://github.com/S-Samiksha/CE4041_Kaggle/blob/main/test-public-relationships.csv) however the pictures selected was randomized
+   - [Submitted CSV](https://github.com/S-Samiksha/CE4041_Kaggle/blob/main/test_Results_SAM_NO_MTCNN_30Epochs_BatchSize_64_new_csv_probability_new_data_new_data_augment_05Drouput.csv)
