@@ -9,10 +9,10 @@ Yu Pei <br>
 Tabu <br>
 
 ## Documents, train, test, CSVs etc. 
-[For training images](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test-public-faces.zip) <br><br>
-[For training relationships CSV:](https://github.com/S-Samiksha/CE4041_Kaggle/blob/main/test-public-relationships.csv) <br><br>
-[For test images:](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test.zip) <br><br>
-[For test sample submission csv:](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=sample_submission.csv) <br><br>
+[Training images](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test-public-faces.zip) <br><br>
+[Training relationships CSV](https://github.com/S-Samiksha/CE4041_Kaggle/blob/main/test-public-relationships.csv) <br><br>
+[Test images](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=test.zip) <br><br>
+[Test sample submission csv:](https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/data?select=sample_submission.csv) <br><br>
 [For monitoring all other submissions:](https://docs.google.com/spreadsheets/u/0/d/1gLLzor08xsw7wZcxoJIVv4xDkaSnzP8LzTi0noMx8vA/edit?pli=1#gid=0) <br><br>
 
 ## Proposed Solution and Explanation of code 
