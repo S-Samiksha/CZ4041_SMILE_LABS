@@ -17,6 +17,55 @@ Tabu <br>
 
 ## Proposed Solution and Explanation of code 
 
+*Randomized data set* <br>
+Randomizing the images obtained allows us to have a different variety of images to train on. <br>
+```python
+
+trainData = []
+
+targetRelatedCount = 36000 #32k data
+relatedCount = 0
+while relatedCount<targetRelatedCount:
+  for k,v in relationshipDict.items():
+     for relation in v:
+      i2 = random.randint(0, len(personPathFile[k])-1) #random photo of person1
+      i3 = random.randint(0, len(personPathFile[relation])-1) #random photo of person2
+      trainData.append((personPathFile[k][i2], personPathFile[relation][i3], 1))
+      relatedCount+=1
+      if relatedCount>=targetRelatedCount:
+          break
+     if relatedCount>=targetRelatedCount:
+        break
+
+trainData = set(trainData)
+trainData = list(trainData)
+positiveRelationsCount = len(trainData)
+print("Current Length of positive relationships: ", len(trainData))
+
+#making non-relationships more random, with same length as trainData
+notRelationAddedCount = 0
+
+#might choose the same relation but handled later on when convert trainData to set and back to list
+while notRelationAddedCount<positiveRelationsCount:
+  for k,v in notRelationshipDict.items():
+     i1 = random.randint(0, len(v)-1)
+     i2 = random.randint(0, len(personPathFile[k])-1) #random photo of person1
+     i3 = random.randint(0, len(personPathFile[v[i1]])-1) #random photo of person2
+     trainData.append((personPathFile[k][i2], personPathFile[v[i1]][i3], 0))
+     notRelationAddedCount+=1
+     if notRelationAddedCount>=positiveRelationsCount:
+      break
+
+print("Current Length of not relationships: ", notRelationAddedCount)
+print("Current Length of total relationships: ", len(trainData))
+
+#change trainData to set, then back to list
+trainData = set(trainData)
+trainData = list(trainData)
+print("Current Length of total relationships: ", len(trainData))
+```
+
+
 *Fully Connected Layers* <br>
 Changing the fully connected layers allows us to have more flexibility and control over the model whilst still using a pre trained model. The fully connected layers that are important are the DropOut Layer and the BatchNormId. 
 <br>
