@@ -5,7 +5,7 @@ As part of NTU's CZ/CE4041 Machine Learning Module, the team was tasked to compe
 Sankar Samiksha <br>
 Jia Min <br>
 Xing Kun <br>
-Yu Pei <br>
+Fan Yupei <br>
 Tabu <br>
 
 ## Video 
